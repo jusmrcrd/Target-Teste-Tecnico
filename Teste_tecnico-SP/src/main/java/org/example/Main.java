@@ -109,11 +109,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        var ParametroTesteDois = 34; // Altere variavel para interagir com as entradas dos metodos
-        var ParametroTesteCinco = "Teste Aqui";//Altere variavel para interagir com as entradas dos metodos
+        var ParametroTesteDois = 34; // Altere variavel para interagir com as entradas
+        var ParametroTesteCinco = "Teste Aqui";//Altere variavel para interagir com as entradas
 
         Teste_Um();
-        Teste_Dois(0);
+        Teste_Dois(ParametroTesteDois);
         Teste_Tres();
         Teste_Quatro();
         Teste_Cinco(ParametroTesteCinco);
