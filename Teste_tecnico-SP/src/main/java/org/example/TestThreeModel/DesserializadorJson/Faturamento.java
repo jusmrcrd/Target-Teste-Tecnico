@@ -1,4 +1,4 @@
-package org.example.TestThreeModel.Desserializador;
+package org.example.TestThreeModel.DesserializadorJson;
 
 public class Faturamento {
     private int dia;

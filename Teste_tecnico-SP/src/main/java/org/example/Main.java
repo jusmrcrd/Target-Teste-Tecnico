@@ -1,10 +1,9 @@
 package org.example;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.TestThreeModel.Deserializer.Faturamento;
+import org.example.TestThreeModel.DesserializadorJson.*;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.Comparator;
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class Main {
         long a = 0, b = 1,i = 0;
 
         System.out.println("Teste: (2)");
-        //exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34..
+
         if(number == 0){
             System.out.printf("Encontrado: %d",0);
         }else{
@@ -36,7 +35,7 @@ public class Main {
                 }
                 a = b;
                 b = next;
-                i += 1l;
+                i++;
             }
         }
         System.out.println("\n");
@@ -48,7 +47,7 @@ public class Main {
             ObjectMapper objectMapper = new ObjectMapper();
             List<Faturamento> DadosJson = objectMapper.readValue(new File(jsonCaminho),
                     objectMapper.getTypeFactory().constructCollectionType(List.class, Faturamento.class));
-            //
+
             List<Faturamento> faturamentoMensal = DadosJson.stream().filter(filtro -> filtro.getValor() > 0).toList();
 
             //O minimo valor Faturamento do mes
