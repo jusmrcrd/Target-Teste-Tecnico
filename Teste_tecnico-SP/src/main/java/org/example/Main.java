@@ -12,14 +12,14 @@ public class Main {
     public static void Teste_Um(){
         int indice = 13,soma = 0,k = 0;
         while(k < indice) soma +=  k +=1;
-        System.out.println("Teste: (1)");
+        System.out.println("Teste:1)");
         System.out.println("O Resultado da soma e: "+soma+"\n");
     }
 
     public static void Teste_Dois(long number){
         long a = 0, b = 1,i = 0;
 
-        System.out.println("Teste: (2)");
+        System.out.println("Teste:2)");
 
         if(number == 0){
             System.out.printf("Encontrado: %d",0);
@@ -30,7 +30,7 @@ public class Main {
                     System.out.printf("Encontrado: %d",next);
                     break;
                 }else if(number < next) {
-                    System.out.printf("Numero %d não faz parte da seguencia\n",number);
+                    System.out.printf("Numero %d não faz parte da sequencia\n",number);
                     break;
                 }
                 a = b;
@@ -41,7 +41,7 @@ public class Main {
         System.out.println("\n");
     }
     public static  void Teste_Tres(){
-        System.out.println("Teste: (3)");
+        System.out.println("Teste:3)");
         try {
             String jsonCaminho = "./src/main/java/org/example/TestThreeModel/data/dados.json";
             ObjectMapper objectMapper = new ObjectMapper();
@@ -65,9 +65,9 @@ public class Main {
             List<Faturamento> mediaSupFaturamento = faturamentoMensal.stream()
                     .filter(filtro -> filtro.getValor() > mediaFaturamento).toList();
 
-            System.out.println("O menor faturamento do Mes: "+minFaturamento);
-            System.out.println("O maior faturamento do Mes: "+maxFaturamento+"\n");
-            System.out.println("Os dias o faturamento superior a media do Mes: "+mediaSupFaturamento.size()+" Dias");
+            System.out.println("O menor faturamento do mês: "+minFaturamento);
+            System.out.println("O maior faturamento do mês: "+maxFaturamento);
+            System.out.println("O numero de Dias que o faturamento foi superior a media do mês: "+mediaSupFaturamento.size()+" Dias");
             mediaSupFaturamento.forEach(System.out::println);
 
             System.out.println("\n");
@@ -85,32 +85,35 @@ public class Main {
 
         final double total = SP+RJ+MG+ES+Outros;
 
-        System.out.println("Teste: (4)");
+        System.out.println("Teste:4)");
         System.out.printf("Percentual de SP: %.2f%%\n", (SP / total) * 100);
         System.out.printf("Percentual de RJ: %.2f%%\n", (RJ / total) * 100);
         System.out.printf("Percentual de MG: %.2f%%\n", (MG / total) * 100);
         System.out.printf("Percentual de ES: %.2f%%\n", (ES / total) * 100);
-        System.out.printf("Percentual de Outros: %.2f%%\n", (Outros / total) * 100);
+        System.out.printf("Percentual de Outros: %.2f%%\n\n", (Outros / total) * 100);
     }
 
-    public static void Teste_Cinco(String reverse){
-        char[] strchar = reverse.toCharArray();
+    public static void Teste_Cinco(String entrada){
+        char[] caracter = entrada.toCharArray();
 
-        for(int i = 0, l = reverse.length()-1;  i < reverse.length()/2; i++,l--) {
-            char temp = strchar[i];
-            strchar[i] = strchar[l];
-            strchar[l] = temp;
+        for(int i = 0, l = entrada.length()-1;  i < entrada.length()/2; i++,l--) {
+            char temp = caracter[i];
+            caracter[i] = caracter[l];
+            caracter[l] = temp;
         }
+        String inverso = new String(caracter);
 
-        System.out.println(strchar);
+        System.out.println("Teste:5)");
+        System.out.println("Entrada: "+entrada);
+        System.out.println("Invertido: "+inverso);
     }
 
     public static void main(String[] args) {
-        var ParametroTesteDois = 34; // Altere essas variaveis;
-        var ParametroTesteCinco = "Teste Aqui";// Altere essas variaveis;
+        var ParametroTesteDois = 34; // Altere variavel para interagir com as entradas dos metodos
+        var ParametroTesteCinco = "Teste Aqui";//Altere variavel para interagir com as entradas dos metodos
 
         Teste_Um();
-        Teste_Dois(ParametroTesteDois);
+        Teste_Dois(0);
         Teste_Tres();
         Teste_Quatro();
         Teste_Cinco(ParametroTesteCinco);
