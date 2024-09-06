@@ -91,7 +91,7 @@ public class Main {
         System.out.println("primeiro lique a primeira lampada e depois de um tempo desligue, ligue a segunda e  olhe as tres lampadas :");
         System.out.println(" A lampada ligada e a segunda  lampada");
         System.out.println(" A desligada que esta  quente e a primeira e a lampada  ");
-        System.out.println(" A apagada e fria e a terceira ");
+        System.out.println(" A desligada  e fria e a terceira ");
 
     }
 
