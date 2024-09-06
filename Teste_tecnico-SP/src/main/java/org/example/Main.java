@@ -22,12 +22,12 @@ public class Main {
         System.out.println("Teste:2)");
 
         if(number == 0){
-            System.out.printf("Encontrado: %d",0);
+            System.out.printf("numero %d Pertence a seguencia",0);
         }else{
             while(i < 9999) {
                 long next = a + b;
                 if(next == number) {
-                    System.out.printf("Encontrado: %d",next);
+                    System.out.printf("numero %d Pertence a seguencia",next);
                     break;
                 }else if(number < next) {
                     System.out.printf("Numero %d não faz parte da sequencia\n",number);
@@ -119,6 +119,4 @@ public class Main {
         Teste_Cinco(ParametroTesteCinco);
 
     }
-
-
 }
