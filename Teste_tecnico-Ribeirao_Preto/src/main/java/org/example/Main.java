@@ -31,8 +31,8 @@ public class Main {
         char[] caracters = parametro.toCharArray();
         int contador = 0;
 
-        for(int  i= 0; i < caracters.length; i++) {
-            if (caracters[i] == 'a' || caracters[i] == 'A') {
+        for (char caracter : caracters) {
+            if (caracter == 'a' || caracter == 'A') {
                 contador++;
             }
         }
